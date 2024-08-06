@@ -1,5 +1,6 @@
-package com.roseworld.database;
+package com.roseworld.statements;
 
+import com.rosekingdom.rosekingdom.Core.Database.Database;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -12,14 +13,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import static com.roseworld.database.Database.getConnection;
-
-public class Statement {
+public class Statement extends Database{
 
     public static int getId(UUID uuid){
         int id = 0;
-        try (Connection connection = getConnection();
-             PreparedStatement ps = connection.prepareStatement("SELECT * FROM rk_user WHERE uuid=?")) {
+        try(Connection connection = getConnection();
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM rk_user WHERE uuid=?")) {
             ps.setString(1, uuid.toString());
             try(ResultSet result = ps.executeQuery()) {
                 result.next();

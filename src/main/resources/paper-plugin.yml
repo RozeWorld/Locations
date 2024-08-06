@@ -1,11 +1,12 @@
 name: Locations
-version: '0.1.1'
+version: '${version}'
 main: com.roseworld.Locations
 api-version: '1.21'
 authors: [ TMG-8047KG ]
 description: Gives you an option to save locations
+website: https://github.com/RozeWorld/Locations
 dependencies:
-  bootstrap:
+  server:
     RoseKingdom:
       required: true
       join-classpath: true
