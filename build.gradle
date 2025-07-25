@@ -20,7 +20,7 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
-    implementation(files("lib/RoseKingdom-1.1.6-BETA.jar"))
+    implementation(files("lib/RoseKingdom-1.1.8-BETA.jar"))
 }
 
 def targetJavaVersion = 21
